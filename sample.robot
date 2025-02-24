@@ -5,3 +5,4 @@ Library    SeleniumLibrary
 test run
     Open Browser    https://www.google.com/    Chrome
       Maximize Browser Window
+      Click Button    //locator
