@@ -12,10 +12,6 @@ linter:
 # .mega-linter.yml
 cspell:
   enabled: true
-  dictionary:
-    - robotframework
-    - robocop
-    - SARIF
   ignoreWords:
     - robotframework
     - robocop
