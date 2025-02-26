@@ -25,6 +25,5 @@ jobs:
         uses: python -m robocop --reports sarif .
 
       - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
+        run: python -m pip install --upgrade pip
           pip install robotframework-robocop
