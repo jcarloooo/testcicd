@@ -31,4 +31,5 @@ jobs:
 
       - name: Run MegaLinter
         run: |
-          mega-linter-run
+          mega-linter-runner
+
