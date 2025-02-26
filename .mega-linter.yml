@@ -9,14 +9,16 @@ linter:
 
 # You can add any additional configuration here for other linters
 # .mega-linter.yml
-  cspell:
-    enabled: true
-    dictionary:
-      - "robotframework"
-      - "robocop"
-      - "SARIF"
-    ignoreWords:
-      - "robotframework"   # You can ignore this specific word from being flagged
-      - "robocop"
-      - "SARIF"
+# .mega-linter.yml
+cspell:
+  enabled: true
+  dictionary:
+    - robotframework
+    - robocop
+    - SARIF
+  ignoreWords:
+    - robotframework
+    - robocop
+    - SARIF
+
 
