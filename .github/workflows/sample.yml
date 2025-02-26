@@ -19,14 +19,19 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
+          python-version: '3.8'
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
+          pip install robotframework==7.2.2
           pip install robotframework-robocop
 
-      - name: Run Robocop Linting
+      - name: List files for debugging (optional)
+        run: |
+          ls -alh
+
+      - name: Run Robot Framework and Robocop
         run: |
           robot --version  # Ensure Robot Framework is installed
           robocop --output sarif --reports robocop-report.html tests/
