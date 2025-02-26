@@ -3,11 +3,5 @@ linter:
     enabled: true
     language: "python"
     lint_command: "robocop --disable-all --enable-all"
-cspell:
-  enabled: true
-  ignoreWords:
-    - robotframework
-    - robocop
-    - SARIF
 
 
