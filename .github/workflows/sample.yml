@@ -33,3 +33,7 @@ jobs:
         run: |
           mega-linter-runner
 
+      - name: Run MegaLinter
+        run: |
+          mega-linter-runner --config .mega-linter.yml  # Explicitly pass the config file
+
