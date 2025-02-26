@@ -1,5 +1,9 @@
 name: Linter
 
+permissions:
+  contents: read  # Read access to the repository
+  pull-requests: write  # Write access to pull requests (if needed)
+
 on:
   push:
     branches: [main]
