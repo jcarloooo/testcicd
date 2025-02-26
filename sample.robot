@@ -1,7 +1,9 @@
 *** Settings ***
 Library    SeleniumLibrary
+Documentation    Suite documentation
 
 *** Test Cases ***
-test run
+Test run
+    [Documentation]  Test documentation
     Open Browser    https://www.google.com/    Chrome
-      Maximize Browser Window
+    Maximize Browser Window
