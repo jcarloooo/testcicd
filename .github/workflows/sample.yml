@@ -1,34 +1,38 @@
-name: Linter
-
-permissions:
-  contents: read  # Read access to the repository
-  pull-requests: write  # Write access to pull requests (if needed)
+name: Robot Framework Linting and Tests
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
-  build:
+  robocop-lint:
     runs-on: ubuntu-latest
-    # continue even if Robocop returns issues and fails step
-    continue-on-error: true
-    permissions:
-      # required for issues to be recorded
-      security-events: write
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install robotframework-robocop
-      - name: Run robocop
-        run: python -m robocop --reports sarif .
-      - name: Upload SARIF file
+
+      - name: Run Robocop Linting
+        run: |
+          robot --version  # Ensure Robot Framework is installed
+          robocop --output sarif --reports robocop-report.html tests/
+        # Adjust 'tests/' to the folder where your Robot Framework test files are located
+
+      - name: Upload SARIF report (Optional)
         uses: github/codeql-action/upload-sarif@v2
         with:
-          sarif_file: .sarif.json
-          category: robocop
+          sarif_file: robocop-report.sarif
