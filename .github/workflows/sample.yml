@@ -27,7 +27,7 @@ jobs:
 
       - name: Install MegaLinter
         run: |
-          npm install -g mega-linter
+          npm install -g mega-linter-runner
 
       - name: Run MegaLinter
         run: |
