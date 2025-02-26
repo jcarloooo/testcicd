@@ -1,0 +1,22 @@
+# .mega-linter.yml
+
+# Define linters to be used
+linter:
+  robotframework:
+    enabled: true
+    language: "python"  # You can specify your environment here, typically Python
+    lint_command: "robocop --disable-all --enable-all"  # Command to run robocop
+
+# You can add any additional configuration here for other linters
+# .mega-linter.yml
+  cspell:
+    enabled: true
+    dictionary:
+      - "robotframework"
+      - "robocop"
+      - "SARIF"
+    ignoreWords:
+      - "robotframework"   # You can ignore this specific word from being flagged
+      - "robocop"
+      - "SARIF"
+
