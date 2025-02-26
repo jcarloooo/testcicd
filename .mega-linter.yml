@@ -8,3 +8,16 @@ linter:
     lint_command: "robocop --disable-all --enable-all"  # Command to run robocop
 
 # You can add any additional configuration here for other linters
+# .mega-linter.yml
+linter:
+  cspell:
+    enabled: true
+    dictionary:
+      - "robotframework"
+      - "robocop"
+      - "SARIF"
+    ignoreWords:
+      - "robotframework"   # You can ignore this specific word from being flagged
+      - "robocop"
+      - "SARIF"
+
