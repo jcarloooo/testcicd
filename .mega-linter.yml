@@ -11,6 +11,7 @@ linter:
 # .mega-linter.yml
 cspell:
   enabled: true
+  config_file: ".cspell.json"
   dictionary:
     - "robotframework"
     - "robocop"
