@@ -31,5 +31,6 @@ jobs:
 
       - name: Run MegaLinter
         run: |
-          mega-linter --config .mega-linter.yml --debug
+          mega-linter-runner
+          mega-linter --config config/.mega-linter.yml --debug
 
