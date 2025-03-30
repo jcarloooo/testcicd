@@ -17,7 +17,7 @@ cspell:
     - "robocop"
     - "SARIF"
   ignoreWords:
-     - "robotframework"   # You can ignore this specific word from being flagged
-     - "robocop"
-     - "SARIF"
+    - "robotframework"   # You can ignore this specific word from being flagged
+    - "robocop"
+    - "SARIF"
 
