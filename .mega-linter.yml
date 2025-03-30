@@ -12,12 +12,3 @@ linter:
 cspell:
   enabled: true
   config_file: ".cspell.json"
-  dictionary:
-    - "robotframework"
-    - "robocop"
-    - "SARIF"
-  ignoreWords:
-    - "robotframework"   # You can ignore this specific word from being flagged
-    - "robocop"
-    - "SARIF"
-
